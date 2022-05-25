@@ -1,0 +1,81 @@
+{% extends 'main.html' %} {% block content %}
+
+
+
+<main class="formPage my-xl">
+<div style="text-align:center;">
+  <h1>Create Your New Project</h1>
+</div>
+
+  <div class="content-box">
+    <div class="formWrapper">
+      <a class="backButton" href="{% url 'user-account' %}"
+        ><i class="im im-angle-left"></i
+      ></a>
+      <br />
+
+      <form class="form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {% for filed in form %}
+        <!-- Input:Text -->
+        <div class="form__field">
+          <label for="formInput#text"> {{filed.label}} </label>
+          {{filed}}
+        </div>
+        {% endfor %}
+        <br/>
+        <label for="formInput#text">Tags</label>
+        <div class="form__field">
+          {% for tag in project.tags.all %}
+          <div
+            class="project-tag tag tag--pill tag--main"
+            data--tag="{{tag.id}}"
+            data--project="{{project.id}}"
+          >
+            {{tag.name}} &#215;
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="form_field">
+          <label for="formInput#text"> Add your Tags</label>
+          <textarea
+            name="newtags"
+            class="input"
+            placeholder="Add tags here..."
+          ></textarea>
+        </div>
+
+        <input
+          class="btn btn--sub btn--lg my-md"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </div>
+</main>
+
+<script>
+  let tags = document.getElementsByClassName("project-tag");
+  console.log("tags", tags);
+  for (let i = 0; i < tags.length; i++) {
+    tags[i].addEventListener("click", (e) => {
+      let tagID = e.target.dataset.Tag;
+      let projectID = e.target.dataset.Project;
+      
+      fetch("http://127.0.0.1:8000/api/remove-tag/", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ project: projectID, tag: tagID }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          e.target.remove();
+        });
+    });
+  }
+</script>
+
+{% endblock content %}

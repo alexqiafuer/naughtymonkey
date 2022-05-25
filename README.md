@@ -23,10 +23,19 @@ Link: https://naughty-monkey.herokuapp.com/
 
 
 # Projects Page
-<img src="">  
+<img src="./introduction/devsearch2.jpg">  
+
+# Project details Page
+<img src="./introduction/devsearch4.jpg">  
 
 # Profile Page
-<img src="">  
+<img src="./introduction/devsearch3.jpg">
 
 # User Inbox
-<img src="">  
+<img src="./introduction/Devsearch Inbox.jpg">  
+
+# Search for Developers
+<img src="./introduction/devsearch5.jpg">  
+
+# Search for projects
+<img src="./introduction/devsearch6.jpg">  

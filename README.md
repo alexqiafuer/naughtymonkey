@@ -19,7 +19,7 @@ Link: https://naughty-monkey.herokuapp.com/
 * Deployed on Heroku
 
 # Home Page
-<img src="">  
+<img src="./introduction/devsearch1.jpg">  
 
 
 # Projects Page

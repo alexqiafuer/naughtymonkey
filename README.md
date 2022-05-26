@@ -32,7 +32,7 @@ Link: https://naughty-monkey.herokuapp.com/
 <img src="./introduction/devsearch3.jpg">
 
 # User Inbox
-<img src="./introduction/Devsearch Inbox.jpg">  
+<img src="./introduction/devsearch7.jpg">  
 
 # Search for Developers
 <img src="./introduction/devsearch5.jpg">  

@@ -1,6 +1,7 @@
 # naughtymonkey
 A social website written in Django. Users can display their works here and rate other's projects.
-I followed this project as an online course but coded independently to learn Django and web design.
+This was a replication of an internal project I did before and also an online learning course for Django.
+I followed this project but coded independently to learn Django.
 
 Link: https://naughty-monkey.herokuapp.com/
 
